@@ -15,7 +15,7 @@ app = FastAPI(
     description="Applicazione di esempio per deployment su Coolify con PostgreSQL",
     version="2.0.0",
     servers=[
-        {"url": "https://api.luceramultimedia.it", "description": "Production"},
+        {"url": "https://demo.luceramultimedia.it", "description": "Production"},
         {"url": "http://localhost:8000", "description": "Development"}
     ]
 )
@@ -23,7 +23,7 @@ app = FastAPI(
 # Middleware per trusted hosts (sicurezza)
 app.add_middleware(
     TrustedHostMiddleware, 
-    allowed_hosts=["api.luceramultimedia.it", "localhost", "127.0.0.1", "*"]
+    allowed_hosts=["frontend.luceramultimedia.it", "localhost", "127.0.0.1", "*"]
 )
 
 # Configura CORS per permettere richieste dal frontend
