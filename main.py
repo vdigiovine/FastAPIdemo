@@ -7,7 +7,7 @@ from typing import List, Optional
 from sqlalchemy.orm import Session
 import uvicorn
 
-from backend.database import get_db, init_db, ItemDB
+from database import get_db, init_db, ItemDB
 
 # Inizializza l'app FastAPI
 app = FastAPI(
